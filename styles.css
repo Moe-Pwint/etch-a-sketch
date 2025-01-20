@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+
+.column {
+  width: 400px;
+  display: flex;
+}
+
+.squareDiv {
+  background-color:  rgb(232, 162, 232);
+  flex: 1;
+  border: solid black 1px;
+  aspect-ratio: 1;
+}
