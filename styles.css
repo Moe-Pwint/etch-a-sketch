@@ -7,13 +7,20 @@ box-sizing: inherit;
 
 
 .column {
-  width: 400px;
+  width: 800px;
   display: flex;
 }
 
 .squareDiv {
-  background-color:  rgb(232, 162, 232);
+  background-color:  lightblue;
   flex: 1;
-  border: solid black 1px;
   aspect-ratio: 1;
+}
+
+.hoverOn {
+  background-color: darkblue;
+}
+
+.hoverOff {
+  background-color: lightblue;
 }
