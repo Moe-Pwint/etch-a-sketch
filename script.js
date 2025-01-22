@@ -37,7 +37,18 @@ function createGrid(number) {
         p.addEventListener('mouseenter', function() {
             changeColorRandom(p);
         }, {once: true});
+        p.addEventListener('mouseenter', () => {
+            increaseOpacity(p);
+        });
 });
+}
+
+function increaseOpacity (ele) {
+    let currentO = (Number(ele.style.opacity))*10;
+    if (currentO != 10) {
+       currentO += 1; 
+       ele.style.opacity = currentO/10;
+    }
 }
 
 function changeColorRandom (ele) {
@@ -48,20 +59,3 @@ function changeColorRandom (ele) {
     //parent.childNodes[1].style.color = col;//
     ele.style.backgroundColor = randomCol;
 }
-
-/*
-1. Every time a pixel is colored, the color stays and not colored again when the same pixel is hovered again.
-2. Every time the pixel is hovered, the opacity increases 0.1.
-*/
-
-/*
-Additionally, implement a progressive darkening effect where each interaction darkens the square by 10%. 
-The goal is to achieve a fully black (or completely colored) square in only ten interactions.
-Hint: The opacity CSS property is useful here. 
-To learn how to use it, check this MDN docs article about the opacity CSS property.
-*/
-
-
-/*
-
-    */
