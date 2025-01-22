@@ -35,15 +35,22 @@ function createGrid(number) {
     } const pixel = document.querySelectorAll('.squareDiv');
         pixel.forEach(p => {
         p.addEventListener('mouseenter', () => {
-            p.style.backgroundColor = 'darkblue';
+            changeColorRandom(p);
+        });
         p.addEventListener('mouseleave', () => {
             p.style.backgroundColor = 'lightblue';
-    })
     })
 });
 }
 
-
+function changeColorRandom (ele) {
+    const r = (Math.floor(Math.random() * 255) +1);
+    const g = (Math.floor(Math.random() * 255) +1);
+    const b = (Math.floor(Math.random() * 255) +1);
+    var randomCol = "rgb(" + r + "," + g + "," + b + ")";
+    //parent.childNodes[1].style.color = col;//
+    ele.style.backgroundColor = randomCol;
+}
 
 
 /*

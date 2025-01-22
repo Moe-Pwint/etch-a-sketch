@@ -17,10 +17,6 @@ box-sizing: inherit;
   aspect-ratio: 1;
 }
 
-.hoverOn {
-  background-color: darkblue;
-}
-
-.hoverOff {
-  background-color: lightblue;
+.crazyColor {
+  color: black;
 }
